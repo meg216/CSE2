@@ -16,7 +16,7 @@ public class Convert{ //main method
         
         conversionFactor=39.3701; //1 meter is 39.37inches
         inches1=conversionFactor*meters;
-        inches2=(int)(inches1*10000);
+        inches2=(int)(inches1*10000); //limiting the number of decimal places
         inches=inches2/10000;
         System.out.println(meters+" meters is "+inches+"inches.");
 
