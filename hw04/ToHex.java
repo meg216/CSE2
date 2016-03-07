@@ -8,9 +8,9 @@ public class ToHex{ //main method
     public static void main(String[] args){
         Scanner myScanner = new Scanner ( System.in );
         System.out.print("Please enter the three numbers representing RGB values:");
-       while(!myScanner.hasNextDouble()){
-           System.out.println("Sorry, your input must consist of integers.");
-           myScanner.next();
+       while(!myScanner.hasNextDouble()){                                               
+           System.out.println("Sorry, your input must consist of integers.");  //checking for doubles
+           myScanner.next();                     
             }
         double rInput=myScanner.nextDouble();
         while(!myScanner.hasNextDouble()){
