@@ -13,7 +13,10 @@ public class Twisty{
         System.out.print("Input your desired length: ");
         int length=0;
         int width=0;
-        int space=0;
+        String space=" ";
+        String num="#";
+        String forSlash="/";
+        String backSlash="\\";
         
         while(true){                        //getting the length
             if(myscan.hasNextInt()){        //checking that an int was input
@@ -55,8 +58,19 @@ public class Twisty{
             }
        
         }
-       
-       
+        
+        // spaces between top of diamonds is width-2, and it decrements by 2 each line until center
+        
+        // spaces within diamonds starts at zero and increases by 2 until center
+        
+        
+        
+        
+        
+        
+        
+        
+        
        
         
     }

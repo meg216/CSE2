@@ -2,7 +2,7 @@
 //cse 002
 //March 22, 2016
 //homework 7
-// Program 1- Twisty
+// Program 2- Triangles
 
 import java.util.Scanner;
 
