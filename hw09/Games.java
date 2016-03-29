@@ -58,16 +58,22 @@ public class Games{
         }
     }
     public static void scrambler(String original){
-        for(int i=0; i<20;i++){
+        int length=original.length();
+        for(int i=0; i<length;i++){
             Random randgen= new Random();            
-            int length=original.length();
+  
             int randInt1=randgen.nextInt(length);
             int randScramble=randInt1+1;
             int randInt2=randgen.nextInt(length);
             int randScramble2=randInt2+1;
+
+            char a=original.charAt(randScramble);
+            char b=original.charAt(randScramble2);
             
-            char a=original.At(randScramble);
-            char b=original.At(randScramble2);
+            original.replace(a, b);
+            original.replace(b, a);
+            
+            System.out.println(original);
             
             
         }
