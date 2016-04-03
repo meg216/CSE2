@@ -32,17 +32,28 @@ public class Bowtie{
             nStars=nStars-2;
             nSpace++;
             
-        }  //downward triangle
+        }  
         
-        if(nStars==1){
-           while(nStars<nStarsOrig){
-               nStars=nStars+2;
-                
-              System.out.print("*");
-                
-           }
-        }   
+        nStars=9;
+        int starMin=3;
+        int starCounter=0;
+         nSpace=3;
+        int spaceCounter=0;
+        String space=" ";
+        
+        for(starCounter=0;starMin<=nStars;starMin+=2){
             
+            for(spaceCounter=0;spaceCounter<nSpace;spaceCounter++){
+            System.out.print(space);
+            }
+            for(starCounter=0;starCounter<starMin;starCounter++ ){
+                System.out.print("*");
+            }
+        
+        
+        nSpace--;
+        System.out.println();
+        }   
     }
 }    
     
