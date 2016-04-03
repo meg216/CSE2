@@ -8,27 +8,91 @@ import java.util.Scanner;
 public class TwistGenerator{
     //main method required for all Java programs
     public static void main(String arg[]){
-       // Scanner myScanner = new Scanner ( System.in ); 
-        //System.out.print("Enter a positive integer for the length:");
-        //boolean goodData;
-        //goodData=myScannerhasnextInt(); 
-        //int length=0;
-        //n=myScanner.nextint();
+        Scanner myScanner = new Scanner ( System.in ); 
+        System.out.print("Enter a positive integer for the length:");
+        int length=0;
+        while(true){
         
-        //while(!goodData || length<0){
-        //System.out.print("Enter a positive integer for the length:");
-        //goodData=myScannerhasNextInt;
-        //n=myScanner.nextInt();
+        if(myScanner.hasNextInt()){
         
-        //}
+            length=myScanner.nextInt();
+            if(length>0){
+            break;        
+            }
+            else{
+            System.out.print("Enter a positive integer for the length:");
+            myScanner.next();
+            }
+        }
+        else{
+        System.out.print("Enter a positive integer for the length:");
+        myScanner.next();
+            
+            
+        }
         
-        //while(goodData &&n>=0){
-        String full1="\\ / \n X \n/ \\";
-        String mod1="\\ \n\n/";
-        String mod2="/ \n\n/";
-       
-        System.out.println(full1);
-        //}
+        }
+        
+        int counter=0;
+        
+        while(counter<length){
+            System.out.print("\\");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print(" ");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print("/");
+            counter++;
+            if(counter==length){
+                break;
+            }
+        }
+       System.out.println();
+       counter=0;
+       while(counter<length){
+            System.out.print(" ");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print("X");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print(" ");
+            counter++;
+            if(counter==length){
+                break;
+            }
+        }
+       System.out.println();
+              counter=0;
+       while(counter<length){
+            System.out.print("/");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print(" ");
+            counter++;
+            if(counter==length){
+                break;
+            }
+            System.out.print("\\");
+            counter++;
+            if(counter==length){
+                break;
+            }
+        }
+        System.out.println();
+        
+        
     }
 }    
 // do a loop where it takes 3 off of legnth each time and prints full, if not 3 left take mod
