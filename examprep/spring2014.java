@@ -4,16 +4,12 @@ public class spring2014{
     //main method required for all Java programs
     public static void main(String arg[]){
        
-       Scanner myscan= new Scanner(System.in);
-       System.out.print("Enter a positive 5 digit integer.");
-        int x= myscan.nextInt();
-        String y=myscan.next();
-        
-        if(x==x){
-        System.out.println(x);
-        }
-        
-          
+       int[][] stuff= new int[10][];
+       for(int i=0;i<10;i++){
+           stuff[i]=new int[i+1];
+            System.out.print("outer length: "+ stuff.length+"inner length: "+ stuff[i].length);
+       }
+      
        
         
         

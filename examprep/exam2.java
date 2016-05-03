@@ -1,30 +1,20 @@
 
-
+import java.util.Scanner;
 public class exam2{
+    public static void main(String[] args){
     
-    
-    
-    public static int X(int x, int y){
-        x+=3;
-        y+=x;
-        if (y>x+2){return x;}
-        return x+y;
+        
     }
     
-    
-    public static void main(String[] args){
+    public static int dot(int[] u, int[]v){
         
-        
-      int x=10;
-      int y=X(x,x);
-      System.out.println(X(7, -4));
-        
-       
-      
-       
-        
-        
-        
-        
-    }   
+    }
+    public static int[] search(int[] array, int a){
+        for(int i=0; i<array.length; i++){
+            if(a==array[i]){
+                
+            }
+        }
+    }
+
 }
