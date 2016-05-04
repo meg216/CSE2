@@ -229,8 +229,8 @@ public class Holoporter{
                     }//end y
                         
                         
-                }//end k
-                    if(k<input[i][j].length){
+               // }//end k
+                    //if(k<input[i][j].length){
                      smallest=input[i][j][pos];
                      //figure out why this is out of bounds
             
