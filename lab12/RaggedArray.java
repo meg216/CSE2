@@ -40,12 +40,12 @@ public class RaggedArray{
         int r=0;
         int e=0;
         int temp=0;
-        int origposition=0;
+        
         for(int w=0;w<mainArray.length;w++){
             for(e=0;e<mainArray[w].length;e++){
                 min=mainArray[w][e];
-                origposition=e;
-                for( r=e+1;r<mainArray[w].length;r++){
+                pos=e;
+                for(r=(e+1);r<mainArray[w].length;r++){
                     if(mainArray[w][r]<min){
                         min=mainArray[w][r];
                         pos=r;
@@ -53,20 +53,66 @@ public class RaggedArray{
                     }
                 }
             
-           // System.out.println("length "+mainArray[w].length+ " r "+r);
-            
-          if(e<mainArray[w].length){
-                temp=mainArray[w][origposition];
-                mainArray[w][origposition]=min;
+                if(e<mainArray[w].length){
+                temp=mainArray[w][e];
+                mainArray[w][e]=min;
                 mainArray[w][pos]=temp;
-                //System.out.println(temp);
-        }
+                }
+        
             }        
+            
+        }//sorts the members
+        System.out.println("Here is your sorted array:");
+        print(mainArray);
+        
+        
+        int b=0;
+        for(int s=0;s<mainArray.length;s++){
+            int mini=mainArray[s].length;
+            int posArray=s;
+            int[] array=mainArray[s];
+            for(b=s+1;b<mainArray.length;b++){
+                if(mainArray[b].length<mini){
+                    mini=mainArray[b].length;
+                    posArray=b;
+                }
+            }
+           //if(s<mainArray[s].length){
+            int[] tempArray=mainArray[s];
+            mainArray[s]=mainArray[posArray];
+            mainArray[posArray]=tempArray;
+           //}
+        }//rearranges the arrays
+        System.out.println("Here is your rearranged array:");
+        print(mainArray);
+        
+        System.out.println("What number would you like to search for? ");
+        int find=myScan.nextInt();
+        boolean notfound=true;
+        int q1=0;
+        for(int q=0;q<mainArray.length;q++){
+            for( q1=0;q1<mainArray[q].length;q1++){
+                if(mainArray[q][q1]==find){
+                    System.out.println("Column "+ q1+" Row "+q);
+                    notfound=false;
+                    break;
+                }
+                
+            }
+            if(q1<mainArray[q].length){
+            if(mainArray[q][q1]==find){
+                break;
+            }
+            
+        }
+        }
+        if(notfound){
+            System.out.println("Not in the array.");
             
         }
         
-        System.out.println("Array with members sorted:");
-        print(mainArray);
+        
+        
     }
     
     
