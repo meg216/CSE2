@@ -229,10 +229,9 @@ public class Holoporter{
                     }//end y
                         
                         
-               // }//end k
-                    //if(k<input[i][j].length){
+               
                      smallest=input[i][j][pos];
-                     //figure out why this is out of bounds
+                   
             
                      input[i][j][pos]=temp;
                      input[i][j][k]=smallest;
@@ -262,5 +261,3 @@ public class Holoporter{
     
 }// end of class
 
-//need to do same first letter for frankenstein
-//and second part of frankenstein

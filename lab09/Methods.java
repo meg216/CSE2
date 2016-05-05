@@ -192,6 +192,7 @@ public class Methods{
         }
         else{
             cont=0;
+            break;
         }
             
             
