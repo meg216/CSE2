@@ -12,25 +12,30 @@ public static void binary(int[] array, int max,int min,int x, int length){
      System.out.println("The number was found");
      return;
  }
-
+ if(array[0]>x){
+     System.out.println("There was no number below the key");
+     System.out.println("The number above the key was "+array[0]);
+     return;
+ }
 
 if(length>2){
  if(x<array[check]){
      max=check;
-     length=check+1;
+     length=(int)(length/2);
      binary(array,max, min, x, length);
     
      return;
  }
 if(x>array[check]){
     min=check;
-    length=array.length-check;
-    binary(array, max, min, x,length);
+    length=(int)(length/2);
+    binary(array, max, min, x, length);
    
     return;
 }
 }
 if(length<=2){
+    
     if(array[check]<x){
     System.out.println("The number below the key was "+array[check]);
     System.out.println("The number above the key was "+array[check+1]);
@@ -96,12 +101,19 @@ if(length<=2){
         
         if(myScan.hasNextInt()){
         n=myScan.nextInt();
+        if(n>0){
         int length=array2.length;
         binary(array2, array2.length, 0, n, length);
+        }
+        else{
+            System.out.println("You did not enter an int >0");
+        }
         
         
         
-        
+        }
+        else{
+            System.out.println("You did not enter an int");
         }
         
         
